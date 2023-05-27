@@ -1,13 +1,14 @@
-export default function page() {
+export default function List() {
+  const product = ['Tomato', 'Pasta', 'Coconut'];
   return (
     <div>
       <h2>Products</h2>
-      <div className='food'>
-        <h4>상품명 $40</h4>
-      </div>
-      <div className='food'>
-        <h4>상품명 $40</h4>
-      </div>
+      {product.map((el, idx) => (
+        <div ket={el + idx} className='food'>
+          <img src={`/images/food${idx}.png`} className='food-img' />
+          <h3>{el}</h3>
+        </div>
+      ))}
     </div>
   );
 }
