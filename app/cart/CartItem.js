@@ -1,11 +1,16 @@
 'use client';
 
+import { useContext } from 'react';
+import { CartContext } from './page';
+
 export default function CartItem() {
+  const cart = useContext(CartContext);
+
   return (
-    <div className='cart-item'>
-      <p>상품명</p>
-      <p>$40</p>
-      <p>1개</p>
+    <div>
+      {cart.map(el => (
+        <div className='cart-item'>{el}</div>
+      ))}
     </div>
   );
 }
