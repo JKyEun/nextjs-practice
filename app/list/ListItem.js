@@ -12,7 +12,7 @@ export default function ListItem({ item, idx }) {
 
     return (
         <div>
-            <img src={`/images/food${idx}.png`} alt='음' />
+            <img src={`/images/food${idx}.png`} alt='음식' />
             <h3>{item}</h3>
             <span>{count}</span>
             <button onClick={onPlusClick}>+</button>
